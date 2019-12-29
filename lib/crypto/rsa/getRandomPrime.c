@@ -39,7 +39,12 @@ void getRandomNum(mpz_t rand_num, int rand_bit){
 }
 
 void getRandomPrime(mpz_t rand_prime, int rand_bit){
-	int reps;
+	/* 
+	 * Be sure that the probability that the number is a composite
+	 * is extremly small, by checking the reps value.
+	 * Reasonable values are between 15 and  50;
+	 */
+	int reps = 45;
 	
 	getRandomNum(rand_prime, rand_bit);
 	
@@ -54,7 +59,7 @@ void getRandomPrime(mpz_t rand_prime, int rand_bit){
 	
 	while(1){
 		if(mpz_odd_p(rand_prime) == 1){
-			gmp_printf("%Zd\n",rand_prime);
+			//gmp_printf("%Zd\n",rand_prime);
 			if(mpz_probab_prime_p(rand_prime, reps) < 1){
 				getRandomNum(rand_prime, rand_bit);
 			}
