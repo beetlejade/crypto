@@ -7,7 +7,7 @@
 
 void main(void){
 	mpz_t num;
-	int size = 512;
+	int size = 256;
 	getRandomPrime(num, size);
 	gmp_printf("Random number of %d bits : %Zd\n", size, num);
 }
