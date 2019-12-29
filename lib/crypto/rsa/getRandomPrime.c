@@ -11,7 +11,6 @@ void getRandomPrime(mpz_t rand_num, int rand_bit){
 
 	mpz_init(rand_num);
 
-	//rand_bit = 64;
 	mpz_init_set_str(rand_bnd, "1000", 10);
 
 	/* Define the default algorithm for random*/
