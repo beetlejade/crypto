@@ -2,7 +2,6 @@
 #define _KEYGEN_H
 #include <gmp.h>
 
-void getRandomPrime(mpz_t rand_num, int rand_bit);
-
+void eulerTotient(mpz_t euler_totient, mpz_t p, mpz_t q);
 
 #endif

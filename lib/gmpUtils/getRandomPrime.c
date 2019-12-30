@@ -1,7 +1,6 @@
-#include "headers/keyGen.h"
-#include <stdio.h>
-#include <time.h>
+#include "header.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 void getRandomNum(mpz_t rand_num, int rand_bit){
 	
@@ -59,7 +58,6 @@ void getRandomPrime(mpz_t rand_prime, int rand_bit){
 	
 	while(1){
 		if(mpz_odd_p(rand_prime) == 1){
-			//gmp_printf("%Zd\n",rand_prime);
 			if(mpz_probab_prime_p(rand_prime, reps) < 1){
 				getRandomNum(rand_prime, rand_bit);
 			}
