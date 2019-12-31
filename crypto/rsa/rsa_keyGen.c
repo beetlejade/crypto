@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <gmpUtils.h>
+#include <rsa.h>
 
-void rsa_keyGen(mpz_t private, mpz_t public, int size){
+void rsa_keyGen(mpz_t private_key, mpz_t public_key, int size){
 
 	printf("Generating keys...\n");
 	printf("[                                        ]");
