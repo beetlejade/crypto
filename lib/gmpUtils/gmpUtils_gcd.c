@@ -1,5 +1,5 @@
 #include <gmp.h>
-#include "header.h"
+#include <gmpUtils.h>
 
 /*
  * gcd is a more convenient function for mpz_gcd,
@@ -8,7 +8,7 @@
  * bites that do fit are returned.
  */ 
 
-unsigned long gcd(mpz_t a, mpz_t b){
+unsigned long gmpUtils_gcd(mpz_t a, mpz_t b){
 	mpz_t gcd_value;
 	mpz_init(gcd_value);
 

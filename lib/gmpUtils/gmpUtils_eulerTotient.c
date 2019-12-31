@@ -1,12 +1,12 @@
 #include <gmp.h>
-#include "headers/keyGen.h"
+#include <gmpUtils.h>
 
 /* 
  * Compute the Euler totient of n, that is (p-1)(q-1),
  * with n = pq.
  */  
 
-void eulerTotient(mpz_t euler_totient, mpz_t p, mpz_t q){
+void gmpUtils_eulerTotient(mpz_t euler_totient, mpz_t p, mpz_t q){
 	mpz_t p_minus_one, q_minus_one;
 	mpz_t negative_one;
 

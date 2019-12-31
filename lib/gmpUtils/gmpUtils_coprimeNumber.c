@@ -1,8 +1,8 @@
 #include <gmp.h>
 #include <stdio.h>
-#include "header.h"
+#include <gmpUtils.h>
 
-int coprimeNumber(mpz_t a, mpz_t b){
+int gmpUtils_coprimeNumber(mpz_t a, mpz_t b){
 	mpz_t gcd_value;
 	mpz_init(gcd_value);
 

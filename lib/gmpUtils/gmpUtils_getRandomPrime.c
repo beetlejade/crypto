@@ -1,4 +1,5 @@
-#include "header.h"
+#include <gmp.h>
+#include <gmpUtils.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -37,7 +38,7 @@ void getRandomNum(mpz_t rand_num, int rand_bit){
 		
 }
 
-void getRandomPrime(mpz_t rand_prime, int rand_bit){
+void gmpUtils_getRandomPrime(mpz_t rand_prime, int rand_bit){
 	/* 
 	 * Be sure that the probability that the number is a composite
 	 * is extremly small, by checking the reps value.

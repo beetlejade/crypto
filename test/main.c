@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <gmp.h>
 #include "headers/keyGen.h"
-#include "../../gmpUtils/header.h" 
+#include <gmpUtils.h>
 #include <stdlib.h>
 #include <stdarg.h>
 
