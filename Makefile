@@ -18,7 +18,7 @@ _SRC = $(SRC_SOURCES:.c=.o)
 SRC = $(patsubst %,$(SRC_DIR)/%,$(_SRC))
 
 # rsa files
-RSA_SOURCES = rsa_keyGen.c rsa_encryption.c
+RSA_SOURCES = rsa_keyGen.c rsa_encrypt.c
 _RSA = $(RSA_SOURCES:.c=.o)
 RSA = $(patsubst %,$(RSA_DIR)/%,$(_RSA))
 

@@ -5,7 +5,7 @@
 #include <rsa.h>
 
 
-void rsa_keyGen(struct PUBLIC_KEY* public_key, struct PRIVATE_KEY* private_key, int size){
+void rsa_keyGen(PUBLIC_KEY* public_key, PRIVATE_KEY* private_key, int size){
 
 	mpz_t e;		mpz_init_set_str(e, "65537", 10);
 	mpz_t p, pMinusOne;	mpz_init(p); mpz_init(pMinusOne);
