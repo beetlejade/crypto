@@ -58,7 +58,7 @@ void gmpUtils_getRandomPrime(mpz_t rand_prime, int rand_bit){
 	 */
 	
 	while(1){
-		if(mpz_odd_p(rand_prime) == 1){
+		if((mpz_odd_p(rand_prime) == 1) && (mpz_sizeinbase(rand_prime , 2) == rand_bit)){
 			if(mpz_probab_prime_p(rand_prime, reps) < 1){
 				getRandomNum(rand_prime, rand_bit);
 			}
