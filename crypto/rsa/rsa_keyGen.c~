@@ -43,7 +43,7 @@ void rsa_keyGen(PUBLIC_KEY* public_key, PRIVATE_KEY* private_key, int size){
 	}
 
 	mpz_mul(n, p, q);
-	gmpUtils_carmichaelTotient(lambdaN, p, q);
+	gmpUtils_eulerTotient(lambdaN, p, q);
 	
 	/* 
 	 * Here we compute the private exponent d with the mpz_invert function, 

@@ -8,13 +8,13 @@
 
 void gmpUtils_eulerTotient(mpz_t euler_totient, mpz_t p, mpz_t q){
 	mpz_t p_minus_one, q_minus_one;
-	mpz_t negative_one;
 
-	mpz_init_set_str(negative_one, "-1", 10);
 	mpz_init(p_minus_one);
 	mpz_init(q_minus_one);
 
-	mpz_add(p_minus_one, p, negative_one);
-	mpz_add(q_minus_one, q, negative_one);
-	mpz_mul(euler_totient, p_minus_one, q_minus_one);
+	mpz_sub_ui(p_minus_one, p, 1);
+	mpz_sub_ui(q_minus_one, q, 1);
+
+	mpz_lcm(euler_totient, p_minus_one, q_minus_one);
+
 }

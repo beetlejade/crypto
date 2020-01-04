@@ -23,7 +23,7 @@ _RSA = $(RSA_SOURCES:.c=.o)
 RSA = $(patsubst %,$(RSA_DIR)/%,$(_RSA))
 
 # gmpUtils files
-GMPUTILS_SOURCES = gmpUtils_carmichaelTotient.c gmpUtils_coprimeNumber.c gmpUtils_getRandomPrime.c
+GMPUTILS_SOURCES = gmpUtils_eulerTotient.c gmpUtils_coprimeNumber.c gmpUtils_getRandomPrime.c
 _GMPUTILS = $(GMPUTILS_SOURCES:.c=.o)
 GMPUTILS = $(patsubst %,$(GMPUTILS_DIR)/%,$(_GMPUTILS))
 
