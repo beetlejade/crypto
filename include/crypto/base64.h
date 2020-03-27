@@ -3,6 +3,8 @@
 
 const char *base64al = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
+const char *base64al = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+
 size_t base64_encrypted_size(size_t len);
 char *base64(const unsigned char *text);
 
