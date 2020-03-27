@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-const char base64al[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-
 size_t base64_encrypted_size(size_t len)
 {
 	size_t ret;
