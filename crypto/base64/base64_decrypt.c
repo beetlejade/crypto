@@ -16,7 +16,7 @@ size_t base64_decrypted_size(char *crtext)
 	for(size_t i=len; i-->0;) 
 	{
 		if(crtext[i] == '=') 
-			ret--;
+			lend--;
 		else
 			break;
 	}
@@ -37,7 +37,7 @@ int base64d(char *crtext, char *textout)
 		v = base64inv[crtext[i]-43];
 		v = (v << 6) | base64inv[crtext[i+1]-43];
 		v = crtext[i+2] =='=' ? v << 6 : (v << 6) | base64inv[crtext[i+2]-43];
-		v = crtext[i+3] =='=' ? v << 6 : (v << 6) | base64inc[crtext[i+3]-43];
+		v = crtext[i+3] =='=' ? v << 6 : (v << 6) | base64inv[crtext[i+3]-43];
 
 		textout[j] = (v >> 16) & 0xFF;
 		if(crtext[i+2] != '=')
